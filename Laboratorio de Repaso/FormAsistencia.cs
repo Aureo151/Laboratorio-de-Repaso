@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace Laboratorio_de_Repaso
 {
-    public partial class Form1 : Form
+    public partial class FormAsistencia : Form
     {
-        public Form1()
+        public FormAsistencia()
         {
             InitializeComponent();
+        }
+
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
