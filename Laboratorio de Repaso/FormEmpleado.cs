@@ -61,12 +61,16 @@ namespace Laboratorio_de_Repaso
 
             Mostrar();
             
+            txtNombre.Clear();
+            maskedTxtSueldo.Clear();
+
         }
         
         
         private void FormEmpleado_Load(object sender, EventArgs e)
         {
             Mostrar();
+
         }
     }
 }
