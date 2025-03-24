@@ -37,12 +37,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.maskedTxtSueldo = new System.Windows.Forms.MaskedTextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmpleado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAsistencia
             // 
-            this.btnAsistencia.Location = new System.Drawing.Point(567, 38);
+            this.btnAsistencia.Location = new System.Drawing.Point(529, 279);
             this.btnAsistencia.Name = "btnAsistencia";
             this.btnAsistencia.Size = new System.Drawing.Size(159, 82);
             this.btnAsistencia.TabIndex = 0;
@@ -52,7 +54,7 @@
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(567, 205);
+            this.btnCerrar.Location = new System.Drawing.Point(814, 285);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(151, 76);
             this.btnCerrar.TabIndex = 1;
@@ -119,11 +121,22 @@
             this.maskedTxtSueldo.Size = new System.Drawing.Size(67, 22);
             this.maskedTxtSueldo.TabIndex = 10;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(529, 38);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(380, 210);
+            this.dataGridView1.TabIndex = 11;
+            // 
             // FormEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 323);
+            this.ClientSize = new System.Drawing.Size(1021, 472);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.maskedTxtSueldo);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label3);
@@ -135,7 +148,9 @@
             this.Controls.Add(this.btnAsistencia);
             this.Name = "FormEmpleado";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormEmpleado_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmpleado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,6 +167,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.MaskedTextBox maskedTxtSueldo;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
