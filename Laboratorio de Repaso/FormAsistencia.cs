@@ -36,5 +36,18 @@ namespace Laboratorio_de_Repaso
             txtMes.Clear();
             txtHorasMes.Clear();
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            FormReporte formReporte = new FormReporte();
+            formReporte.Show();
+        }
+
+        private void FormAsistencia_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

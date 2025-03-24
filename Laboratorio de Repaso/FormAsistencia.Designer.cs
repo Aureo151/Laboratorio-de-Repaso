@@ -36,11 +36,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtHorasMes = new System.Windows.Forms.TextBox();
             this.btnAgregarAsistencia = new System.Windows.Forms.Button();
+            this.btnReporte = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCerrar
             // 
-            this.btnCerrar.Location = new System.Drawing.Point(384, 210);
+            this.btnCerrar.Location = new System.Drawing.Point(12, 291);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(182, 75);
             this.btnCerrar.TabIndex = 0;
@@ -106,11 +109,33 @@
             this.btnAgregarAsistencia.UseVisualStyleBackColor = true;
             this.btnAgregarAsistencia.Click += new System.EventHandler(this.btnAgregarAsistencia_Click);
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(179, 208);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(154, 77);
+            this.btnReporte.TabIndex = 8;
+            this.btnReporte.Text = "Ir a Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(365, 27);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(459, 301);
+            this.dataGridView1.TabIndex = 9;
+            // 
             // FormAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 304);
+            this.ClientSize = new System.Drawing.Size(836, 423);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.btnAgregarAsistencia);
             this.Controls.Add(this.txtHorasMes);
             this.Controls.Add(this.label3);
@@ -121,6 +146,8 @@
             this.Controls.Add(this.btnCerrar);
             this.Name = "FormAsistencia";
             this.Text = "FormAsistencia";
+            this.Load += new System.EventHandler(this.FormAsistencia_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +163,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtHorasMes;
         private System.Windows.Forms.Button btnAgregarAsistencia;
+        private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

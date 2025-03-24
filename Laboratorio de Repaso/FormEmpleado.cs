@@ -27,6 +27,7 @@ namespace Laboratorio_de_Repaso
             dataGridView1.Refresh();
 
 
+
         }
 
         private void btnAsistencia_Click(object sender, EventArgs e)
