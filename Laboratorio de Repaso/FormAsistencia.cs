@@ -12,6 +12,7 @@ namespace Laboratorio_de_Repaso
 {
     public partial class FormAsistencia : Form
     {
+        List<Empleado> empleados = new List<Empleado>();
         List<Asistencia> asistencias = new List<Asistencia>();
         public FormAsistencia()
         {
@@ -27,14 +28,12 @@ namespace Laboratorio_de_Repaso
         private void btnAgregarAsistencia_Click(object sender, EventArgs e)
         {
             Asistencia asistencia = new Asistencia();
-            asistencia.NoEmpleado = Convert.ToInt16(txtNoEmpleado.Text);
-            asistencia.mes = Convert.ToInt16(txtMes.Text);
-            asistencia.horasMes = Convert.ToInt16(txtHorasMes.Text);
+            asistencia.NoEmpleado = Convert.ToInt16(comboBoxEmpleados.SelectedValue);
+            asistencia.horasMes = ((int)numericHorasxMes.Value);
+            asistencia.mes = Convert.ToInt16(numericMes.Value);
 
             asistencias.Add(asistencia);
-            txtNoEmpleado.Clear();
-            txtMes.Clear();
-            txtHorasMes.Clear();
+            
         }
 
         private void btnReporte_Click(object sender, EventArgs e)
@@ -45,7 +44,13 @@ namespace Laboratorio_de_Repaso
 
         private void FormAsistencia_Load(object sender, EventArgs e)
         {
+            List<Empleado> empleados = new List<Empleado>();
+            EmpleadoArchivo empleadoArchivo = new EmpleadoArchivo();
+            empleados = empleadoArchivo.Leer(@"../../Empleados.json");
 
+            comboBoxEmpleados.DisplayMember = "Nombre";
+            comboBoxEmpleados.ValueMember = "NoEmpleado";
+            comboBoxEmpleados.DataSource = empleados;
         }
 
 
