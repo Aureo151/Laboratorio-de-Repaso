@@ -73,5 +73,13 @@ namespace Laboratorio_de_Repaso
             Mostrar();
 
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+        
+            FormReporte formReporte = new FormReporte();
+            formReporte.Show();
+            
+        }
     }
 }

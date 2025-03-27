@@ -38,6 +38,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.maskedTxtSueldo = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEmpleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -131,11 +132,22 @@
             this.dataGridView1.Size = new System.Drawing.Size(380, 210);
             this.dataGridView1.TabIndex = 11;
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(257, 279);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(178, 82);
+            this.btnReporte.TabIndex = 12;
+            this.btnReporte.Text = "Ir a Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // FormEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1021, 472);
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.maskedTxtSueldo);
             this.Controls.Add(this.btnGuardar);
@@ -168,6 +180,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.MaskedTextBox maskedTxtSueldo;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnReporte;
     }
 }
 
