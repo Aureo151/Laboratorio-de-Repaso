@@ -124,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(836, 423);
+            this.ClientSize = new System.Drawing.Size(570, 423);
             this.Controls.Add(this.numericHorasxMes);
             this.Controls.Add(this.numericMes);
             this.Controls.Add(this.comboBoxEmpleados);

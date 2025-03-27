@@ -34,6 +34,9 @@ namespace Laboratorio_de_Repaso
 
             asistencias.Add(asistencia);
             
+            AsistenciaArchivo asistenciaArchivo = new AsistenciaArchivo();
+
+            asistenciaArchivo.Guardar(@"../../Asistencias.json", asistencias);
         }
 
         private void btnReporte_Click(object sender, EventArgs e)

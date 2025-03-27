@@ -14,7 +14,7 @@ namespace Laboratorio_de_Repaso
     {
         List<Empleado> empleados = new List<Empleado>();
         List<Asistencia> asistencias = new List<Asistencia>();
-        List<ReporteSueldo> reportes = new List<ReporteSueldo>();
+        List<ReporteSueldo> reporteSueldos = new List<ReporteSueldo>();
         public FormReporte()
         {
             InitializeComponent();
@@ -24,14 +24,14 @@ namespace Laboratorio_de_Repaso
             EmpleadoArchivo empleadoArchivo = new EmpleadoArchivo();
             empleados = empleadoArchivo.Leer("../../Empleados.json");
 
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = empleados;
+            dataGridView1.DataSource = null;        
             dataGridView1.Refresh();
         }
 
         private void CargarAsistencia()
         {
-
+            AsistenciaArchivo asistenciaArchivo = new AsistenciaArchivo();
+            asistencias = asistenciaArchivo.Leer("../../Asistencias.json");
 
         }
         private void btnMostrarReporte_Click(object sender, EventArgs e)
@@ -49,15 +49,21 @@ namespace Laboratorio_de_Repaso
                         reporte.Mes = asistencia.mes.ToString();
                         reporte.SueldoTotal = empleado.SueldoHora * asistencia.horasMes;
 
-                        reportes.Add(reporte);
+                        reporteSueldos.Add(reporte);
 
 
                     }
                 }
             }
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = reportes;
+            dataGridView1.DataSource = reporteSueldos;
             dataGridView1.Refresh();
+        }
+
+        private void FormReporte_Load(object sender, EventArgs e)
+        {
+            CargarAsistencia();
+            CargarEmpleados();
         }
     }
 }

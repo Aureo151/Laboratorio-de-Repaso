@@ -9,10 +9,11 @@ namespace Laboratorio_de_Repaso
     internal class ReporteSueldo
     {
         //se obtiene desde la clase Empleado
-        public string Nombre;
-        //se calcula: SueldoHora * HorasMes
-        public decimal SueldoTotal;
+        public string Nombre {  get; set; }
+        
         //Hay que convertir Mes de Asistencia en su nombre
-        public string Mes;
+        public string Mes {  get; set; }
+
+        public decimal SueldoTotal { get; set; }
     }
 }
